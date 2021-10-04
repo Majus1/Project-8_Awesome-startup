@@ -46,4 +46,31 @@ p {
   letter-spacing: 0.5px;
   font-weight: 400;
 }
+
+#main-nav {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+#main-nav a {
+  text-decoration: none;
+}
+
+header {
+  color: white;
+  background-color: #002F2F;
+  padding: 1rem 0;
+}
+
+header img {
+  width: 3rem;
+  border-radius: red 2px solid;
+}
+
+header a {
+  color: white;
+}
 /*# sourceMappingURL=style.css.map */

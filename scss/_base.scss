@@ -1,0 +1,15 @@
+// --------------------------------
+// This file contains: Base styling
+// --------------------------------
+header {
+    color: white;
+    background-color: $blink_rich-black;
+    padding: 1rem 0;
+    img {
+        width: 3rem;
+        border-radius: red 2px solid;
+    }
+    a {
+        color: white;
+    }
+}
