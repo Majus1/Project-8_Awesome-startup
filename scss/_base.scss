@@ -2,14 +2,33 @@
 // This file contains: Base styling
 // --------------------------------
 header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     color: white;
     background-color: $blink_rich-black;
-    padding: 1rem 0;
+    padding: 1rem 2rem;
     img {
         width: 3rem;
-        border-radius: red 2px solid;
     }
-    a {
-        color: white;
+    nav {
+        display: flex;
+        flex-direction: row;
+        margin-left: auto;
+        a {
+            color: white;
+            margin: 0.5rem;
+        }
+        :last-child {
+            margin-right: 0;
+        }
+    }
+    @media (max-width: 375px) {
+        flex-direction: column;
+        nav {
+            text-align: center;
+            margin: 0 auto;
+            flex-direction: column;
+        }
     }
 }
