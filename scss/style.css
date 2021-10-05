@@ -59,6 +59,15 @@ p {
   text-decoration: none;
 }
 
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #E6E6E6;
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -114,5 +123,53 @@ header nav :last-child {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+}
+
+#column-gird {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(380px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 1.5rem;
+  max-width: 1300px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.user-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  border-radius: 5px;
+  border: 2px solid #A2A2A2;
+  padding: 1rem;
+}
+
+.user-card img {
+  width: 130px;
+  border-radius: 50%;
+}
+
+.user-card .user-card__type-section {
+  padding-left: 1rem;
+}
+
+.user-card .user-card__type-section .user-name {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.user-card .user-card__type-section .user-email,
+.user-card .user-card__type-section .user-location {
+  color: #A2A2A2;
+  font-size: 1rem;
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,6 +1,12 @@
 // --------------------------------
 // This file contains: Base styling
 // --------------------------------
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: $blink_platinum;
+}
 header {
     display: flex;
     flex-direction: row;
@@ -29,6 +35,39 @@ header {
             text-align: center;
             margin: 0 auto;
             flex-direction: column;
+        }
+    }
+}
+#column-gird {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 1.5rem;
+    max-width: 1300px;
+    width: 90%;
+    margin: 0 auto; 
+}
+.user-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: white;
+    border-radius: 5px;
+    border: 2px solid $blink_quick-silver;
+    padding: 1rem;
+    img {
+        width: 130px;
+        border-radius: 50%;
+    }
+    .user-card__type-section {
+        padding-left: 1rem;
+        .user-name {
+            font-size: 18px;
+            font-weight: 600;
+        }
+        .user-email,
+        .user-location {
+            color: $blink_quick-silver;
+            font-size: 1rem;
         }
     }
 }
