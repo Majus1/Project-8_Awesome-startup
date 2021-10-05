@@ -71,3 +71,10 @@ header {
         }
     }
 }
+footer {
+    color: $blink_white;
+    background-color: $blink_black;
+    text-align: center;
+    padding: 5rem 0;
+    margin-top: 5rem;
+}

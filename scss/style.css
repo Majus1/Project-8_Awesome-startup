@@ -172,4 +172,12 @@ header nav :last-child {
   color: #A2A2A2;
   font-size: 1rem;
 }
+
+footer {
+  color: #ffffff;
+  background-color: #000000;
+  text-align: center;
+  padding: 5rem 0;
+  margin-top: 5rem;
+}
 /*# sourceMappingURL=style.css.map */
