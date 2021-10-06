@@ -4,10 +4,12 @@ let columGrid = document.querySelector("#column-gird")
 console.log("Maj is working on the fetxh API Part");
 
 // Fetch API network request
-fetch("https://randomuser.me/api/")
+for (let z = 0; z < 12; z++) {
+    fetch("https://randomuser.me/api/")
     .then( response => response.json())
     .then (data => generateUserCard(data.results[0]))
 
+}
 // The function zone
 function generateUserCard(data) {
     console.log(data)
@@ -22,7 +24,7 @@ function generateUserCard(data) {
     // Logs the information with wich we will be working
     console.log(`This is user: ${userFirstName} ${userLastName}\nThe user email: ${userEmail}\nThe user is stationed: ${userStationed}\nThe user phone number: ${userPhoneNumber}\nThe user street number: ${userStret}\nThe user photo: ${userImage}`)
     // Creates the user user card
-    columGrid.innerHTML = `
+    let addedUserCard = `
                 <div class="user-card">
                 <img alt="empolye-picture" src="${userImage}">
                 <div class="user-card__type-section">
@@ -32,5 +34,6 @@ function generateUserCard(data) {
                 </div>
             </div>
             `
+    columGrid.innerHTML += addedUserCard
 
 }

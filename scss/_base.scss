@@ -45,9 +45,9 @@ main h5 {
 }
 #column-gird {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
     gap: 1.5rem;
-    max-width: 1300px;
+    max-width: 1400px;
     width: 90%;
     margin: 0 auto; 
     @media (max-width: 375px) {
@@ -78,11 +78,13 @@ main h5 {
             font-size: 1rem;
         }
     }
-    @media (max-width: 375px) {
+    @media (max-width: 768px) {
         flex-direction: column;
-        width: 300px;
+        min-width: 300px;
+        max-width: 1fr;
         margin: 0 auto;
         .user-card__type-section {
+            text-align: center;
             padding-left: 0;
         }
     }
