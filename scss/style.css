@@ -128,12 +128,19 @@ header nav :last-child {
 #column-gird {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(380px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  -ms-grid-columns: (minmax(350px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 1.5rem;
   max-width: 1300px;
   width: 90%;
   margin: 0 auto;
+}
+
+@media (max-width: 375px) {
+  #column-gird {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
 }
 
 .user-card {
@@ -171,6 +178,20 @@ header nav :last-child {
 .user-card .user-card__type-section .user-location {
   color: #A2A2A2;
   font-size: 1rem;
+}
+
+@media (max-width: 375px) {
+  .user-card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 300px;
+    margin: 0 auto;
+  }
+  .user-card .user-card__type-section {
+    padding-left: 0;
+  }
 }
 
 footer {

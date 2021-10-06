@@ -40,11 +40,14 @@ header {
 }
 #column-gird {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 1.5rem;
     max-width: 1300px;
     width: 90%;
     margin: 0 auto; 
+    @media (max-width: 375px) {
+        grid-template-columns: 1fr;
+    }
 }
 .user-card {
     display: flex;
@@ -68,6 +71,14 @@ header {
         .user-location {
             color: $blink_quick-silver;
             font-size: 1rem;
+        }
+    }
+    @media (max-width: 375px) {
+        flex-direction: column;
+        width: 300px;
+        margin: 0 auto;
+        .user-card__type-section {
+            padding-left: 0;
         }
     }
 }
