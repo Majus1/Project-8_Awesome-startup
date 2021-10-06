@@ -2,7 +2,6 @@
 let columGrid = document.querySelector("#column-gird")
 
 console.log("Maj is working on the fetxh API Part");
-console.log(columGrid);
 
 // Fetch API network request
 fetch("https://randomuser.me/api/")
@@ -19,5 +18,19 @@ function generateUserCard(data) {
     let userStationed = data.location.city;
     let userStret = `${data.location.street.number}, ${data.location.street.name}`
     let userPhoneNumber = data.phone;
-    console.log(`This is user: ${userFirstName} ${userLastName}\nThe user email: ${userEmail}\nThe user is stationed: ${userStationed}\nThe user phone number: ${userPhoneNumber}\nThe user street number: ${userStret}`)
+    let userImage = data.picture.large;
+    // Logs the information with wich we will be working
+    console.log(`This is user: ${userFirstName} ${userLastName}\nThe user email: ${userEmail}\nThe user is stationed: ${userStationed}\nThe user phone number: ${userPhoneNumber}\nThe user street number: ${userStret}\nThe user photo: ${userImage}`)
+    // Creates the user user card
+    columGrid.innerHTML = `
+                <div class="user-card">
+                <img alt="empolye-picture" src="${userImage}">
+                <div class="user-card__type-section">
+                    <p><span class="user-name">${userFirstName} ${userLastName}</span></p>
+                    <p><span class="user-email">${userEmail}</span></p>
+                    <p><span class="user-location">${userStationed}</span></p>
+                </div>
+            </div>
+            `
+
 }
