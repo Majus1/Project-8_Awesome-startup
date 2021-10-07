@@ -1,7 +1,10 @@
 // Global variables
 let columGrid = document.querySelector("#column-gird")
 
-console.log("Maj is working on the fetxh API Part");
+
+// ---------------
+// Fetch API zone
+// ---------------
 
 // Fetch API network request
 for (let z = 0; z < 12; z++) {
@@ -37,3 +40,14 @@ function generateUserCard(data) {
     columGrid.innerHTML += addedUserCard
 
 }
+
+// ---------------
+// LIGHTBOX zone
+// ---------------
+let lightBox = document.createElement("div");
+lightBox.id="lightbox"
+
+// Dodamo element markupu
+document.body.appendChild(lightBox)
+
+// Open LIGHTBOX function
