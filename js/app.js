@@ -28,12 +28,12 @@ function generateUserCard(data) {
     console.log(`This is user: ${userFirstName} ${userLastName}\nThe user email: ${userEmail}\nThe user is stationed: ${userStationed}\nThe user phone number: ${userPhoneNumber}\nThe user street number: ${userStret}\nThe user photo: ${userImage}`)
     // Creates the user user card
     let addedUserCard = `
-                <div class="user-card">
-                <img alt="empolye-picture" src="${userImage}">
+            <div class="user-card clickable-user-card">
+                <img class="clickable-user-card" alt="empolye-picture" src="${userImage}">
                 <div class="user-card__type-section">
-                    <p><span class="user-name">${userFirstName} ${userLastName}</span></p>
-                    <p><span class="user-email">${userEmail}</span></p>
-                    <p><span class="user-location">${userStationed}</span></p>
+                    <p><span class="user-name clickable-user-card">${userFirstName} ${userLastName}</span></p>
+                    <p><span class="user-email clickable-user-card">${userEmail}</span></p>
+                    <p><span class="user-location clickable-user-card">${userStationed}</span></p>
                 </div>
             </div>
             `
@@ -51,3 +51,13 @@ lightBox.id="lightbox"
 document.body.appendChild(lightBox)
 
 // Open LIGHTBOX function
+document.addEventListener("click", (event) =>{
+    let clickedElement = event.target
+    // Checks if a user card is clicked
+    if (clickedElement.classList.contains('clickable-user-card')) {
+        console.log("You clicked on user card")
+        lightBox.style.display = "block"
+    }
+});
+
+// can you just add new classes and listen for them in the if statement 
