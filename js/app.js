@@ -51,13 +51,15 @@ lightBox.id="lightbox"
 document.body.appendChild(lightBox)
 
 // Open LIGHTBOX function
-document.addEventListener("click", (event) =>{
-    let clickedElement = event.target
-    // Checks if a user card is clicked
-    if (clickedElement.classList.contains('clickable-user-card')) {
-        console.log("You clicked on user card")
-        lightBox.style.display = "block"
-    }
-});
+// document.addEventListener("click", (event) =>{
+//     let clickedElement = event.target
+//     console.log(clickedElement)
+//     // Checks if a user card is clicked
+//     // if (clickedElement.classList.contains('clickable-user-card')) {
+//     //     console.log(clickedElement)
+//     //     // lightBox.style.display = "block"
 
-// can you just add new classes and listen for them in the if statement 
+//     // }
+// });
+
+// Ali izberemo vse user carde?
