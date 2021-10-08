@@ -28,12 +28,12 @@ function generateUserCard(data) {
     console.log(`This is user: ${userFirstName} ${userLastName}\nThe user email: ${userEmail}\nThe user is stationed: ${userStationed}\nThe user phone number: ${userPhoneNumber}\nThe user street number: ${userStret}\nThe user photo: ${userImage}`)
     // Creates the user user card
     let addedUserCard = `
-            <div class="user-card clickable-user-card">
-                <img class="clickable-user-card" alt="empolye-picture" src="${userImage}">
+                <div class="user-card">
+                <img alt="empolye-picture" src="${userImage}">
                 <div class="user-card__type-section">
-                    <p><span class="user-name clickable-user-card">${userFirstName} ${userLastName}</span></p>
-                    <p><span class="user-email clickable-user-card">${userEmail}</span></p>
-                    <p><span class="user-location clickable-user-card">${userStationed}</span></p>
+                    <p><span class="user-name">${userFirstName} ${userLastName}</span></p>
+                    <p><span class="user-email">${userEmail}</span></p>
+                    <p><span class="user-location">${userStationed}</span></p>
                 </div>
             </div>
             `
@@ -50,6 +50,7 @@ lightBox.id="lightbox"
 // Dodamo element markupu
 document.body.appendChild(lightBox)
 
+<<<<<<< HEAD
 // Open LIGHTBOX function
 // document.addEventListener("click", (event) =>{
 //     let clickedElement = event.target
@@ -63,3 +64,6 @@ document.body.appendChild(lightBox)
 // });
 
 // Ali izberemo vse user carde?
+=======
+// Open LIGHTBOX function
+>>>>>>> parent of f5216c1 (Black overlay apears on click)
