@@ -58,6 +58,7 @@ main h5 {
     margin: 0 auto; 
     @media (max-width: 375px) {
         grid-template-columns: 1fr;
+        text-align: center;
     }
 }
 .user-card {

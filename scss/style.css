@@ -158,6 +158,7 @@ main h5 {
   #column-gird {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
+    text-align: center;
   }
 }
 

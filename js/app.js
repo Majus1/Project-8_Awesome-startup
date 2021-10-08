@@ -37,33 +37,4 @@ function generateUserCard(data) {
                 </div>
             </div>
             `
-    columGrid.innerHTML += addedUserCard
-
 }
-
-// ---------------
-// LIGHTBOX zone
-// ---------------
-let lightBox = document.createElement("div");
-lightBox.id="lightbox"
-
-// Dodamo element markupu
-document.body.appendChild(lightBox)
-
-<<<<<<< HEAD
-// Open LIGHTBOX function
-// document.addEventListener("click", (event) =>{
-//     let clickedElement = event.target
-//     console.log(clickedElement)
-//     // Checks if a user card is clicked
-//     // if (clickedElement.classList.contains('clickable-user-card')) {
-//     //     console.log(clickedElement)
-//     //     // lightBox.style.display = "block"
-
-//     // }
-// });
-
-// Ali izberemo vse user carde?
-=======
-// Open LIGHTBOX function
->>>>>>> parent of f5216c1 (Black overlay apears on click)
