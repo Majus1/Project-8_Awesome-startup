@@ -28,7 +28,7 @@ function generateUserCard(data) {
     console.log(`This is user: ${userFirstName} ${userLastName}\nThe user email: ${userEmail}\nThe user is stationed: ${userStationed}\nThe user phone number: ${userPhoneNumber}\nThe user street number: ${userStret}\nThe user photo: ${userImage}`)
     // Creates the user user card
     let addedUserCard = `
-                <div class="user-card">
+                <div class="user-card" onclick="testnaFunkcija()">
                 <img alt="empolye-picture" src="${userImage}">
                 <div class="user-card__type-section">
                     <p><span class="user-name">${userFirstName} ${userLastName}</span></p>
@@ -37,4 +37,12 @@ function generateUserCard(data) {
                 </div>
             </div>
             `
+    columGrid.innerHTML += addedUserCard
+}
+
+// ---------------
+// Testna funkcija
+// ---------------
+function testnaFunkcija() {
+    console.log("Kr nekaj moram rečt")
 }
