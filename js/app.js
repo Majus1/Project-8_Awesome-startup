@@ -44,3 +44,16 @@ function generateUserCard(data) {
 function testnaFunkcija() {
     console.log("Kr nekaj moram rečt")
 }
+
+// ---------------
+// LIGHTBOX zone
+// ---------------
+let lightBox = document.createElement("div");
+lightBox.id="lightbox"
+let cancleLightboxButton = document.createElement("i")
+cancleLightboxButton.className="cancle-lightbox-button"
+// Dodamo element markupu
+document.body.appendChild(lightBox)
+lightBox.appendChild(cancleLightboxButton)
+
+// Open LIGHTBOX function
