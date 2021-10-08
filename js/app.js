@@ -7,12 +7,10 @@ let columGrid = document.querySelector("#column-gird")
 // ---------------
 
 // Fetch API network request
-for (let z = 0; z < 12; z++) {
-    fetch("https://randomuser.me/api/")
+    fetch("https://randomuser.me/api/?results=12")
     .then( response => response.json())
-    .then (data => generateUserCard(data.results[0]))
+    .then (data => console.log(data.results.map( singleUser => generateUserCard(singleUser))))
 
-}
 // The function zone
 function generateUserCard(data) {
     console.log(data)
