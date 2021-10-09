@@ -58,3 +58,5 @@ function testnaFunkcija() {
     console.log("Kr nekaj moram rečt")
     lightBox.style.display = "block";
 }
+// const allUserCards = document.querySelectorAll(".user-card")
+// console.log(allUserCards)
