@@ -39,21 +39,22 @@ function generateUserCard(data) {
 }
 
 // ---------------
-// Testna funkcija
-// ---------------
-function testnaFunkcija() {
-    console.log("Kr nekaj moram rečt")
-}
-
-// ---------------
 // LIGHTBOX zone
 // ---------------
+// Created elements for lgihtbox
 let lightBox = document.createElement("div");
 lightBox.id="lightbox"
+
 let cancleLightboxButton = document.createElement("i")
-cancleLightboxButton.className="cancle-lightbox-button"
-// Dodamo element markupu
+cancleLightboxButton.className="fa fa-times cancle-lightbox-button"
+cancleLightboxButton.setAttribute("style", "color: #ffffff")
+
+// Adding element to markup
 document.body.appendChild(lightBox)
 lightBox.appendChild(cancleLightboxButton)
 
 // Open LIGHTBOX function
+function testnaFunkcija() {
+    console.log("Kr nekaj moram rečt")
+    lightBox.style.display = "block";
+}

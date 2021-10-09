@@ -106,7 +106,6 @@ footer {
         width: 3rem;
     }
 }
-
 #lightbox {
     display: none;
     position: fixed;
@@ -115,4 +114,7 @@ footer {
     background-color: rgba($color: #000000, $alpha: 0.8);
     width: 100%;
     height: 100%;
+    i {
+        font-size: 2.5rem;
+    }
 }
