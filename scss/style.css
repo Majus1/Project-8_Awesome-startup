@@ -199,6 +199,12 @@ main h5 {
   font-size: 1rem;
 }
 
+.user-card .type-section-meta {
+  display: none;
+  color: #A2A2A2;
+  font-size: 1rem;
+}
+
 @media (max-width: 768px) {
   .user-card {
     -webkit-box-orient: vertical;
@@ -250,6 +256,15 @@ main h5 {
 
 .expanded-user-card .user-card__type-section .user-email,
 .expanded-user-card .user-card__type-section .user-location {
+  color: #A2A2A2;
+  font-size: 1rem;
+}
+
+.expanded-user-card hr {
+  width: 90%;
+}
+
+.expanded-user-card .type-section-meta {
   color: #A2A2A2;
   font-size: 1rem;
 }
@@ -308,7 +323,7 @@ footer .user-card__type-section .user-location {
 }
 
 #lightbox i {
-  font-size: 2.5rem;
+  font-size: 1rem;
 }
 
 #lightbox.active {
