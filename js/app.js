@@ -33,6 +33,11 @@ function generateUserCard(data) {
                     <p><span class="user-email">${userEmail}</span></p>
                     <p><span class="user-location">${userStationed}</span></p>
                 </div>
+                <div class="user-card__type-section-meta">
+                    <hr>
+                    <p><span class="user-email">${userPhoneNumber}</span></p>
+                    <p><span class="user-location">${userStret}</span></p>
+                </div>
             </div>
             `
     columGrid.innerHTML += addedUserCard
@@ -50,29 +55,40 @@ cancleLightboxButton.className="fa fa-times cancle-lightbox-button"
 cancleLightboxButton.setAttribute("style", "color: #ffffff")
 
 // Adding element to markup
-
+document.body.appendChild(lightBox)
+lightBox.appendChild(cancleLightboxButton)
 
 // Open LIGHTBOX function
 columGrid.addEventListener("click", (event)=>{
     if (event.target !== columGrid) {
         // Traverses up the DOM tree and finds our .user-card with the help of closest()
-        const userCard = event.target.closest(".user-card")
-        console.log(`You clicked on the card it is stored in variable userCard and is ready for use!`)
-        console.log(userCard)
+        const userCard = event.target.closest(".user-card").innerHTML
+
+        // Creates the expanded user card. Gathers all the information and ads a new class
+        let expandedUserCard = document.createElement("div")
+        expandedUserCard.classList.add("expanded-user-card")
+
+        
+
+        expandedUserCard.innerHTML = userCard
+        lightBox.appendChild(expandedUserCard)
+        // console.log(expandedUserCard)
 
         // Makes the overlay apper by adding the active class to the light box element
         lightBox.classList.add("active")
-            // Creates and appends cancle button
-        let cancleLightboxButton = document.createElement("i")
-        cancleLightboxButton.className="fa fa-times cancle-lightbox-button"
-        cancleLightboxButton.setAttribute("style", "color: #ffffff")
-        document.body.appendChild(lightBox)
-        lightBox.appendChild(cancleLightboxButton)
-            // Creates and appends cancle button
-        let expandedUserCard = userCard
-        lightBox.appendChild(expandedUserCard)
 
-
+        // Creates and appends cancle button
+        // let expandedUserCard = createElement
+        // lightBox.appendChild(expandedUserCard)
+        
     }
 })
 
+// Close LIGHTBOX function
+cancleLightboxButton.addEventListener("click", () => {})
+
+
+
+// ::::: TO DO :::::
+// To do make card disapear on click only one card mus be in light box
+// Create a new card and dont only move the old card.               
