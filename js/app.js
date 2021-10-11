@@ -27,7 +27,7 @@ function generateUserCard(data) {
     // Creates the user user card
     let addedUserCard = `
                 <div class="user-card">
-                    <i class="fa fa-times cancleLightboxButton" aria-hidden="true"></i>
+                    <i class="fa fa-times cancle-lightbox-button" aria-hidden="true"></i>
                     <img alt="empolye-picture" src="${userImage}">
                     <div class="user-card__type-section">
                         <p><span class="user-name">${userFirstName} ${userLastName}</span></p>
@@ -48,15 +48,16 @@ function generateUserCard(data) {
 // LIGHTBOX zone
 // ---------------
 
-// Creates the lightbox ovelay 
-let lightBox = document.createElement("div");
-lightBox.id="lightbox"
-document.body.appendChild(lightBox)
-
 
 
 // Open LIGHTBOX function
 columGrid.addEventListener("click", (event)=>{
+
+    // Creates the lightbox ovelay 
+    let lightBox = document.createElement("div");
+    lightBox.id="lightbox"
+    document.body.appendChild(lightBox)
+
     if (event.target !== columGrid) {
         // Traverses up the DOM tree and finds our .user-card with the help of closest()
         const justUserCard = event.target.closest(".user-card")
@@ -70,10 +71,12 @@ columGrid.addEventListener("click", (event)=>{
 
         // Makes the overlay apper by adding the active class to the light box element
         lightBox.classList.add("active")
-        
     }
 })
 
+// Close LIGHTBOX function
+// let cancleLightboxButton = lightBox.querySelector(".cancle-lightbox-button");
+// console.log(cancleLightboxButton)
 
 
 // ::::: TO DO :::::
