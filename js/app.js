@@ -13,15 +13,18 @@ let columGrid = document.querySelector("#column-gird")
 
 // The function zone
 function generateUserCard(data) {
-    // console.log(data)
+    console.log(data)
     // Variables from Fetch
     let userFirstName = data.name.first;
     let userLastName = data.name.last;
     let userEmail = data.email;
     let userStationed = data.location.city;
-    let userStret = `${data.location.street.number}, ${data.location.street.name}`
+    let userStret = `${data.location.street.number} ${data.location.street.name}, ${data.location.state} ${data.location.postcode}`
     let userPhoneNumber = data.phone;
     let userImage = data.picture.large;
+    let userDobYear = data.dob.date.substring(2, 4)
+    let userDobMonth = data.dob.date.substring(5, 7)
+    let userDobDay = data.dob.date.substring(8, 10)
     // Logs the information with wich we will be working
     // console.log(`This is user: ${userFirstName} ${userLastName}\nThe user email: ${userEmail}\nThe user is stationed: ${userStationed}\nThe user phone number: ${userPhoneNumber}\nThe user street number: ${userStret}\nThe user photo: ${userImage}`)
     // Creates the user user card
@@ -38,6 +41,7 @@ function generateUserCard(data) {
                     <div class="type-section-meta">
                         <p><span class="user-phone-number">${userPhoneNumber}</span></p>
                         <p><span class="user-street-location">${userStret}</span></p>
+                        <p><span class="user-date-of-birth">Birthday: ${userDobDay}/${userDobMonth}/${userDobYear}</span></p>
                     </div>
             </div>
             `
@@ -75,9 +79,11 @@ columGrid.addEventListener("click", (event)=>{
 
 // Close LIGHTBOX function
 lightBox.addEventListener("click", (event)=> {
+    // checks if the icon was clicked
     if (event.target.classList == "fa fa-times cancle-lightbox-button") {
         let expandedUserCard = document.querySelector(".expanded-user-card");
         lightBox.removeChild(expandedUserCard)
+        // activates the lightbox
         lightBox.classList.remove("active")
     }
 })
