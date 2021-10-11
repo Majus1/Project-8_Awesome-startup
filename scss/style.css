@@ -175,6 +175,8 @@ main h5 {
           align-items: center;
   background-color: white;
   border-radius: 5px;
+  -webkit-transition: .3s ease-out;
+  transition: .3s ease-out;
   border: 2px solid #A2A2A2;
   padding: 1rem;
 }
@@ -223,6 +225,11 @@ main h5 {
     text-align: center;
     padding-left: 0;
   }
+}
+
+#column-gird .user-card:hover {
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .expanded-user-card {
