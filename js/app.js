@@ -27,6 +27,7 @@ function generateUserCard(data) {
     // Creates the user user card
     let addedUserCard = `
                 <div class="user-card">
+                    <i class="fa fa-times cancleLightboxButton" aria-hidden="true"></i>
                     <img alt="empolye-picture" src="${userImage}">
                     <div class="user-card__type-section">
                         <p><span class="user-name">${userFirstName} ${userLastName}</span></p>
@@ -64,30 +65,14 @@ columGrid.addEventListener("click", (event)=>{
         // Creates the expanded user card. Gathers all the information and ads a new class
         let expandedUserCard = document.createElement("div")
         expandedUserCard.classList.add("expanded-user-card")
-
-        // Creates a cancelation button and styles it
-        let cancleLightboxButton = document.createElement("i")
-        cancleLightboxButton.className="fa fa-times cancle-lightbox-button"
-        cancleLightboxButton.setAttribute("style", "color: #A2A2A2")
-        expandedUserCard.appendChild(cancleLightboxButton)
-
-
-        
-
         expandedUserCard.innerHTML = userCard
         lightBox.appendChild(expandedUserCard)
 
         // Makes the overlay apper by adding the active class to the light box element
         lightBox.classList.add("active")
-        // Creates and appends cancle button
-        // let expandedUserCard = createElement
-        // lightBox.appendChild(expandedUserCard)
         
     }
 })
-
-// Close LIGHTBOX function
-// cancleLightboxButton.addEventListener("click", () => {})
 
 
 

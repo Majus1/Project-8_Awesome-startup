@@ -205,6 +205,10 @@ main h5 {
   font-size: 1rem;
 }
 
+.user-card i {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .user-card {
     -webkit-box-orient: vertical;
@@ -269,6 +273,12 @@ main h5 {
   font-size: 1rem;
 }
 
+.expanded-user-card i {
+  font-size: 1rem;
+  color: #A2A2A2;
+  margin-left: auto;
+}
+
 @media (max-width: 768px) {
   .expanded-user-card {
     -webkit-box-orient: vertical;
@@ -320,10 +330,6 @@ footer .user-card__type-section .user-location {
   background-color: rgba(0, 0, 0, 0.8);
   width: 100%;
   height: 100%;
-}
-
-#lightbox i {
-  font-size: 1rem;
 }
 
 #lightbox.active {
