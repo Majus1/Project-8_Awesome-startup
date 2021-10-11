@@ -48,16 +48,13 @@ function generateUserCard(data) {
 // LIGHTBOX zone
 // ---------------
 
-
+// Creates the lightbox ovelay 
+let lightBox = document.createElement("div");
+lightBox.id="lightbox"
+document.body.appendChild(lightBox)
 
 // Open LIGHTBOX function
 columGrid.addEventListener("click", (event)=>{
-
-    // Creates the lightbox ovelay 
-    let lightBox = document.createElement("div");
-    lightBox.id="lightbox"
-    document.body.appendChild(lightBox)
-
     if (event.target !== columGrid) {
         // Traverses up the DOM tree and finds our .user-card with the help of closest()
         const justUserCard = event.target.closest(".user-card")
@@ -66,17 +63,27 @@ columGrid.addEventListener("click", (event)=>{
         // Creates the expanded user card. Gathers all the information and ads a new class
         let expandedUserCard = document.createElement("div")
         expandedUserCard.classList.add("expanded-user-card")
+            // Adds the content to the expandedUserCard
         expandedUserCard.innerHTML = userCard
         lightBox.appendChild(expandedUserCard)
 
         // Makes the overlay apper by adding the active class to the light box element
         lightBox.classList.add("active")
+        
     }
 })
 
 // Close LIGHTBOX function
-// let cancleLightboxButton = lightBox.querySelector(".cancle-lightbox-button");
-// console.log(cancleLightboxButton)
+lightBox.addEventListener("click", (event)=> {
+    if (event.target.classList == "fa fa-times cancle-lightbox-button") {
+        let expandedUserCard = document.querySelector(".expanded-user-card");
+        lightBox.removeChild(expandedUserCard)
+        lightBox.classList.remove("active")
+    }
+})
+
+
+
 
 
 // ::::: TO DO :::::
